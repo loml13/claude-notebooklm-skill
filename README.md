@@ -77,7 +77,7 @@ cp skill/archive_config.example.json skill/archive_config.json
   "vault": "~/Documents/MyVault",
   "default": "Inbox/notebooklm",
   "by_notebook_id": {
-    "<your-notebook-uuid>": "Books/通信原理/notebooklm"
+    "<your-notebook-uuid>": "Books/xxxx/notebooklm"
   }
 }
 ```
@@ -106,7 +106,7 @@ ln -sf "$(pwd)/skill" ~/.claude/skills/notebooklm
 
 ```bash
 claude
-> /notebooklm 解释残留边带调制的频谱互补对称条件
+> /notebooklm <输入你想要问的问题>
 ```
 
 接下来：
@@ -124,30 +124,28 @@ claude
 
 ```markdown
 ---
-notebook: 通信原理（樊昌信第 7 版）
+notebook: 书名
 notebook_id: c33a803a-...
 date: 2026-05-24 11:30
 updated: 2026-05-25 10:30
-question: "全面讲解复习第五章内容"
+question: "输入你的问题"
 questions:
-  - "2026-05-24 11:30 — 全面讲解复习第五章内容"
-  - "2026-05-24 14:07 — 详细讲解常规调幅..."
-  - "2026-05-25 10:30 — 每种调制方法都像 AM 这样详细展开"
+  - "2026-05-24 11:30 — 你的问题"
+  - "2026-05-24 14:07 — 你的问题"
 tags: [notebooklm]
 ---
 
 > [!question] 问题
-> 全面讲解复习第五章内容
+> 你的问题
 
 # 回答
 
-## 1. 常规调幅 (AM)
+## 1. xxxx
 ... 详细内容 ...
 
 ## 提问历史
-- 2026-05-25 10:30 — 每种调制方法都像 AM 这样详细展开
-- 2026-05-24 14:07 — 详细讲解常规调幅...
-- 2026-05-24 11:30 — 全面讲解复习第五章内容
+- 2026-05-24 14:07 — 提问
+- 2026-05-24 11:30 — 提问
 ```
 
 第二次、第三次追问的新信息会按主题嵌入到对应小节，frontmatter 维护一份完整的提问时间线。

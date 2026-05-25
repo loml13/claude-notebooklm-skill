@@ -1,0 +1,19 @@
+# 用户运行时配置 —— 不要进仓库
+skill/archive_config.json
+skill/default_notebook
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / 编辑器
+.DS_Store
+.idea/
+.vscode/
+
+# 临时产物
+*.log
+*.tmp

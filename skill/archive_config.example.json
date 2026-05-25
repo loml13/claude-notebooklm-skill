@@ -1,0 +1,7 @@
+{
+  "vault": "~/Documents/MyVault",
+  "default": "Inbox/notebooklm",
+  "by_notebook_id": {
+    "00000000-0000-0000-0000-000000000000": "Books/SomeSubject/notebooklm"
+  }
+}

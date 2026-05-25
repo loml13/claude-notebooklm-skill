@@ -2,7 +2,7 @@
 
 让 [Claude Code](https://claude.com/claude-code) 通过 [NotebookLM](https://notebooklm.google.com) 提问，并把回答智能合并到你的 [Obsidian](https://obsidian.md) 笔记里。
 
-适用场景：用 NotebookLM 把教材 / 论文 / 文档喂进去当 RAG 源，让 Claude Code 当你的 CLI 入口，问出来的答案直接长进你的知识库 —— 而不是散落成一堆"YYYY-MM-DD 问题.md"碎片。
+适用场景：用 NotebookLM 把教材 / 论文 / 文档喂进去当 RAG 源，让 Claude Code 当你的 CLI 入口，问出来的答案直接长进你的知识库 —— 而不是散落成一堆的.md碎片，或是单纯停留在notbookllm当中。
 
 ## 工作流
 

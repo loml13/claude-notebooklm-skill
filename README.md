@@ -6,24 +6,26 @@
 
 ## 工作流
 
-```
-你           Claude Code             NotebookLM            Obsidian Vault
- │                │                       │                       │
- │ /notebooklm Q  │                       │                       │
- ├───────────────►│                       │                       │
- │                │  query.py(Q)          │                       │
- │                ├──────────────────────►│                       │
- │                │              Gemini 答 │                       │
- │                │◄──────────────────────┤                       │
- │                │  Chrome 渲染（MathJax）                        │
- │                │                       │                       │
- │                │  归档目录空？                                  │
- │                │   ├─ 是 ──► 直接新建 ──────────────────────────►│
- │                │   └─ 否 ──► 输出 STAGING 信息                  │
- │                │            ↓                                  │
- │                │       Claude 读现有笔记 frontmatter            │
- │                │       挑相关候选，Read 全文                    │
- │                │       合并改写，保留结构 + 提问历史 ──────────►│
+```mermaid
+sequenceDiagram
+    actor U as 你
+    participant CC as Claude Code
+    participant NB as NotebookLM
+    participant OB as Obsidian Vault
+
+    U->>CC: /notebooklm Q
+    CC->>NB: query.py(Q)
+    NB-->>CC: Gemini 答
+    Note over CC: Chrome 渲染 (MathJax)
+
+    alt 归档目录为空
+        CC->>OB: 直接新建
+    else 归档目录非空
+        CC->>CC: 输出 STAGING
+        CC->>CC: 读 frontmatter 挑候选
+        CC->>CC: Read 全文
+        CC->>OB: 合并改写到旧文档
+    end
 ```
 
 ## 解决了什么问题
